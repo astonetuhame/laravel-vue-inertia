@@ -17,8 +17,17 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render(
         'Welcome',
-        ['name' => 'Astone Tuhame',
-        'frameworks' => ['Laravel', 'Vue', 'Inertia']
+        [
+            'name' => 'Astone Tuhame',
+            'frameworks' => ['Laravel', 'Vue', 'Inertia']
         ]
     );
+});
+
+Route::get('/users', function () {
+    return Inertia::render('Users');
+});
+
+Route::get('/settings', function () {
+    return Inertia::render('Settings');
 });

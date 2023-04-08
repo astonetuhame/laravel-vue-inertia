@@ -7,15 +7,20 @@
       {{ framework }}
     </li>
   </ul>
+
+  <Nav />
 </template>
 
 
 <script>
+import Nav from "@/Shared/Nav.vue";
+
 export default {
   props: {
     name: String,
-    frameworks: Array
+    frameworks: Array,
   },
+  components: { Nav },
 };
 </script>
 
