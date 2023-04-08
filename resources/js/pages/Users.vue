@@ -1,5 +1,4 @@
 <template>
-  <Layout>
     <h1 class="text-4xl font-bold">Users</h1>
     <div style="margin-top: 400px">
       <p>The time is {{ time }}</p>
@@ -7,16 +6,14 @@
         >Refresh</Link
       >
     </div>
-  </Layout>
 </template>
 
 
 <script>
 import Layout from "@/Shared/Layout.vue";
-import { Link } from "@inertiajs/vue3";
 
 export default {
-  components: { Layout, Link },
+  layout : Layout,
   props: {
     time: String,
   },

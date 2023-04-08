@@ -16,11 +16,11 @@
 import Layout from "@/Shared/Layout.vue";
 
 export default {
+  layout: Layout,
   props: {
     name: String,
     frameworks: Array,
   },
-  components: { Layout },
 };
 </script>
 
