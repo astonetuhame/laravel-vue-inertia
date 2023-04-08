@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-    return Inertia::render('Users');
+    return Inertia::render('Users', ['time' => \Carbon\Carbon::now()->toDateTimeString()]);
 });
 
 Route::get('/settings', function () {
