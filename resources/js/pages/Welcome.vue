@@ -13,16 +13,11 @@
 
 
 <script>
-import Layout from "@/Shared/Layout.vue";
 
 export default {
-  layout: Layout,
   props: {
     name: String,
     frameworks: Array,
   },
 };
 </script>
-
-<style>
-</style>
