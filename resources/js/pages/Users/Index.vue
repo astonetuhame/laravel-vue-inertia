@@ -2,13 +2,17 @@
   <Head title="Users" />
 
   <div class="flex justify-between mb-2">
-    <h1 class="text-4xl font-bold">Users</h1>
-    <input
-      v-model="search"
-      type="text"
-      placeholder="Search..."
-      class="border px-2 rounded-lg"
-    />
+    <div class="flex items-center">
+      <h1 class="text-4xl font-bold">Users</h1>
+      <Link href="/users/create" class="text-blue-500 text-sm ml-3">New User</Link>
+
+      <input
+        v-model="search"
+        type="text"
+        placeholder="Search..."
+        class="border px-2 rounded-lg"
+      />
+    </div>
   </div>
 
   <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
