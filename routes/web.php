@@ -4,6 +4,7 @@ use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,14 @@ use Illuminate\Support\Facades\Request;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+Route::get('login', [LoginController::class, 'create'])->name('login');
+Route::post('login', [LoginController::class, 'store']);
+Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth');
+
+Route::middleware('auth')->group(function () {
 
 Route::get('/', function () {
     return Inertia::render(
@@ -60,4 +69,6 @@ Route::post('/users', function () {
 
 Route::get('/settings', function () {
     return Inertia::render('Settings');
+});
+
 });
